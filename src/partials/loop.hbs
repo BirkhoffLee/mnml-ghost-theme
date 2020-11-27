@@ -1,8 +1,3 @@
-{{! Previous/next page links - only displayed on page 2+ }}
-<div class="extra-pagination inner">
-    {{pagination}}
-</div>
-
 {{! This is the post loop - each post will be output using this markup }}
 {{#foreach posts visibility="all"}}
 <article class="{{post_class}}">
@@ -60,13 +55,13 @@
 
 
     <div class="post-excerpt">
-        <p>{{excerpt words="30"}} <span style="color:#ccc;">…</span><a class="read-more" href="{{url}}"> <span>&raquo;</span> </a></p>
+        <p>
+          <a class="content-link" href="{{url}}">{{excerpt words="38"}} <span style="color:#ccc;">…</span></a>
+          <a class="read-more" href="{{url}}"> <span>&raquo;</span> </a>
+        </p>
     </div>
     <footer class="post-meta">
-<!--        {{#if primary_author.profile_image}}<img class="author-thumb" src="{{primary_author.profile_image}}" alt="Author image" nopin="nopin" />{{/if}}-->
-        By {{#primary_author}}<a href="{{url}}">{{name}}</a>{{/primary_author}}
-        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMM Do YYYY"}}</time>
-        {{tags prefix=" &bull; "}}
+        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMM Do, YYYY"}}</time>
     </footer>
 </article>
 {{/foreach}}

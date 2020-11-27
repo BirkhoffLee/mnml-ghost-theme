@@ -1,7 +1,7 @@
 <ul class="nav">
   {{#foreach navigation}}
-  <li class="{{link_class for=(url) class=(concat "nav-" slug)}} {{#if current}} nav-current{{/if}}" role="presentation">
-    <a href="{{url absolute="true"}}">{{label}}</a>
+  <li class="{{link_class for=(url) class=(concat "nav-" slug)}} {{#if current}} nav-current{{/if}}" role="presentation" target="_blank" rel="noreferrer noopener">
+    <a href="{{url absolute="true"}}" herf>{{label}}</a>
   </li>
   {{/foreach}}
 
@@ -28,12 +28,12 @@
   {{! Social media links }}
   {{#if @site.facebook}}
     <span class="meta-spacer"></span>
-    <li class="{{link_class for=(url) class=(concat "nav-" facebook_url)}}{{#if current}} nav-current{{/if}}" role="presentation">
+    <li class="{{link_class for=(url) class=(concat "nav-" facebook_url)}}{{#if current}} nav-current{{/if}}" role="presentation" target="_blank" rel="noreferrer noopener">
       <a href="{{facebook_url}}"><span class="icon-facebook"></span></a>
     </li>
   {{/if}}
   {{#if @site.twitter}}
-    <li class="{{link_class for=(url) class=(concat "nav-" twitter_url)}}{{#if current}} nav-current{{/if}}" role="presentation">
+    <li class="{{link_class for=(url) class=(concat "nav-" twitter_url)}}{{#if current}} nav-current{{/if}}" role="presentation" target="_blank" rel="noreferrer noopener">
       <a href="{{twitter_url}}"><span class="icon-twitter"></span></a>
     </li>
   {{/if}}
